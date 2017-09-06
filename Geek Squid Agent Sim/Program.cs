@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Geek_Squid_Agent_Sim
+namespace GeekSquidAgentSim
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Geek_Squid_Agent_Sim
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new GeekSquidAgentSim());
         }
     }
 }
