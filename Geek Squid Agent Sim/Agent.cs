@@ -12,11 +12,12 @@ namespace GeekSquidAgentSim
     using System;
     using System.Collections.Generic;
     
-    public partial class Trait
+    public partial class Agent
     {
         public int ID { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public int ConflictingIDs { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string FullName { get; set; }
+        public string FormalName { get; set; }
     }
 }

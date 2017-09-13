@@ -11,12 +11,19 @@ namespace GeekSquidAgentSim
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// 
+
+        public static MainDB mainDB = new MainDB();
+        public static GeekSquidAgentSim mainWindow;
+
+
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GeekSquidAgentSim());
+            mainWindow = new GeekSquidAgentSim();
+            Application.Run(mainWindow);
         }
     }
 }

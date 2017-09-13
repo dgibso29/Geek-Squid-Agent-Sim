@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MainDBModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="Data Source=&quot;F:\Dropbox\Dropbox\Earring Pranks Studios, LLC\Practice Files\Daniel\Coding\Practice Projects\Geek Squid Agent Sim\MainDB.db&quot;" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Agent">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="FormalName" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="FormalName" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="Age" Type="int" Nullable="false" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="Satisfaction" Type="real" Nullable="false" />
+          <Property Name="Happiness" Type="real" Nullable="false" />
+          <Property Name="TraitOne" Type="int" Nullable="false" />
+          <Property Name="TraitTwo" Type="int" Nullable="false" />
+          <Property Name="Membership" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="FirstName">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LastName">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Suspect">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" Nullable="false" />
+          <Property Name="Owner" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="Brand" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="AgeInMonths" Type="int" Nullable="false" />
+          <Property Name="PurchasePrice" Type="real" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Trait">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="ConflictingIDs" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="MainDBModelStoreContainer">
+          <EntitySet Name="Agent" EntityType="Self.Agent" store:Type="Tables" />
+          <EntitySet Name="Client" EntityType="Self.Client" store:Type="Tables" />
+          <EntitySet Name="FirstName" EntityType="Self.FirstName" store:Type="Tables" />
+          <EntitySet Name="LastName" EntityType="Self.LastName" store:Type="Tables" />
+          <EntitySet Name="Suspect" EntityType="Self.Suspect" store:Type="Tables" />
+          <EntitySet Name="Trait" EntityType="Self.Trait" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MainDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Agent">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FullName" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FormalName" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FullName" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FormalName" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="Int32" Nullable="false" />
+          <Property Name="Gender" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Satisfaction" Type="Single" Nullable="false" />
+          <Property Name="Happiness" Type="Single" Nullable="false" />
+          <Property Name="TraitOne" Type="Int32" Nullable="false" />
+          <Property Name="TraitTwo" Type="Int32" Nullable="false" />
+          <Property Name="Membership" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Suspect">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Owner" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Brand" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AgeInMonths" Type="Int32" Nullable="false" />
+          <Property Name="PurchasePrice" Type="Single" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Trait">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConflictingIDs" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FirstName">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LastName">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="MainDB" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Agents" EntityType="Self.Agent" />
+          <EntitySet Name="Clients" EntityType="Self.Client" />
+          <EntitySet Name="Suspects" EntityType="Self.Suspect" />
+          <EntitySet Name="Traits" EntityType="Self.Trait" />
+          <EntitySet Name="FirstNames" EntityType="Self.FirstName" />
+          <EntitySet Name="LastNames" EntityType="Self.LastName" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MainDBModelStoreContainer" CdmEntityContainer="MainDB">
+          <EntitySetMapping Name="Agents">
+            <EntityTypeMapping TypeName="MainDBModel.Agent">
+              <MappingFragment StoreEntitySet="Agent">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="FormalName" ColumnName="FormalName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="MainDBModel.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="Membership" ColumnName="Membership" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="FormalName" ColumnName="FormalName" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Satisfaction" ColumnName="Satisfaction" />
+                <ScalarProperty Name="Happiness" ColumnName="Happiness" />
+                <ScalarProperty Name="TraitOne" ColumnName="TraitOne" />
+                <ScalarProperty Name="TraitTwo" ColumnName="TraitTwo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Suspects">
+            <EntityTypeMapping TypeName="MainDBModel.Suspect">
+              <MappingFragment StoreEntitySet="Suspect">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="Brand" ColumnName="Brand" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="AgeInMonths" ColumnName="AgeInMonths" />
+                <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Traits">
+            <EntityTypeMapping TypeName="MainDBModel.Trait">
+              <MappingFragment StoreEntitySet="Trait">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ConflictingIDs" ColumnName="ConflictingIDs" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FirstNames">
+            <EntityTypeMapping TypeName="MainDBModel.FirstName">
+              <MappingFragment StoreEntitySet="FirstName">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LastNames">
+            <EntityTypeMapping TypeName="MainDBModel.LastName">
+              <MappingFragment StoreEntitySet="LastName">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
